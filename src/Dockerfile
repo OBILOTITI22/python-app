@@ -1,9 +1,12 @@
 FROM python:3.10-alpine
 
-COPY /requirements.txt /tmp
+COPY requirements.txt /tmp/requirements.txt
 
 RUN pip install -r /tmp/requirements.txt
 
-COPY ./src /src
+COPY src/ /src/
 
-CMD python /src/app.py
+# Make sure you're in the right directory when running
+WORKDIR /src
+
+CMD ["python", "app.py"]
