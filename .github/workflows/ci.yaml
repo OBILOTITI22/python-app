@@ -7,7 +7,7 @@ on:
       - "Dockerfile"
       - ".github/workflows/ci.yaml"
     branches:
-      - main
+      - master
 
 jobs:
   ci:
