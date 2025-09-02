@@ -12,11 +12,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-
-      - name: Check out
+      - 
+        name: Check out
         uses: actions/checkout@v4
 
-      - name: Shorten commit id
+      - 
+        name: Shorten commit id
         shell: bash
         run: |
           echo "COMMIT_ID=${GITHUB_SHA::6}" >> "$GITHUB_ENV"
