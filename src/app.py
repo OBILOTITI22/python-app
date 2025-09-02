@@ -1,5 +1,6 @@
 from flask import Flask, jsonify
 import datetime
+import socket
 
 app = Flask(__name__)
 
@@ -8,7 +9,8 @@ app = Flask(__name__)
 def hello_world():
     return jsonify ({
         'message': 'Hello World!',
-        'time': datetime.datetime.now().strftime("%I:%M%p on %B %d, %Y")
+        'time': datetime.datetime.now().strftime("%I:%M%p on %B %d, %Y"),
+        'hostname': socket.gethostname()
     })
 
 @app.route('/api/v1/healthz')
