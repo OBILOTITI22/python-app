@@ -1,11 +1,11 @@
-name: cicd
+name: ci
 
 on:
   push:
     paths:
       - src/**
     branches:
-      - main
+      - master
 
 jobs:
   ci:
