@@ -5,7 +5,7 @@ metadata:
   description: Python app that displays time
   annotations:
     github.com/project-slug: OBILOTITI22/python-app
-    backstage.io/techdocs-ref: dir:.
+    backstage.io/techdocs-ref: 'docs/index.md'
 spec:
   type: service
   owner: development
